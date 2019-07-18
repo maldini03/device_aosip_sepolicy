@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all qcom products
-# that inherit from AOSiP
+# that inherit from Dirty Unicorns
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,13 +10,13 @@ endif
 endif
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/aosip/sepolicy/qcom/private
+    device/du/sepolicy/qcom/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/aosip/sepolicy/qcom/dynamic
+    device/du/sepolicy/qcom/dynamic
 else
 BOARD_SEPOLICY_DIRS += \
-    device/aosip/sepolicy/qcom/dynamic \
-    device/aosip/sepolicy/qcom/vendor
+    device/du/sepolicy/qcom/dynamic \
+    device/du/sepolicy/qcom/vendor
 endif
