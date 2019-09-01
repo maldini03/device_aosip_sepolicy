@@ -413,6 +413,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libMiWatermark_shim \
     libcamera_sdm660_shim
 
 # Telephony

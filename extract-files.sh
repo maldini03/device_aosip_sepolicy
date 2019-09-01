@@ -49,13 +49,21 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+
+    vendor/lib64/libgf_ca.so)
+        sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "${2}"
+        ;;
+
+    vendor/lib/hw/camera.sdm660.so)
+        patchelf --replace-needed libMiWatermark.so libMiWatermark_shim.so "${2}"
+        patchelf --add-needed libcamera_sdm660_shim.so "${2}"
+        ;;
+    esac
+}
+
 BLOB_ROOT="$DU_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
-
-sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "$DEVICE_BLOB_ROOT"/vendor/lib64/libgf_ca.so
-
-# Load camera.sdm660.so shim
-CAM_SDM660="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
-patchelf --add-needed libcamera_sdm660_shim.so "$CAM_SDM660"
 
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${DU_ROOT}" false "${CLEAN_VENDOR}"
