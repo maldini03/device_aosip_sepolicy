@@ -6,14 +6,19 @@
     <string name="xiaomiparts_settings_summary">Device Specific Customizations</string>
 
     <!-- Category Title -->
-    <string name="display_title">Display</string>
-    <string name="vibration_title">Vibration Controller</string>
-    <string name="torch_title">Torch</string>
-    <string name="audio_title">Audio</string>
+    <string name="audio_category">Audio</string>
+    <string name="display_category">Display</string>
+    <string name="other_category">Other</string>
+    <string name="torch_category">Torch</string>
+    <string name="vibration_category">Vibration</string>
 
     <!-- Audio amplification -->
     <string name="headphone_gain">Headphone gain</string>
     <string name="microphone_gain">Microphone gain</string>
+
+    <!-- USB fastcharge -->
+    <string name="fastcharge_title">Enable USB Fastcharge</string>
+    <string name="fastcharge_summary">Charge upto 900mA when connected to a computer via USB 3.0 port</string>
 
     <!-- Torch -->
     <string name="torch_brightness_title">Brightness</string>
