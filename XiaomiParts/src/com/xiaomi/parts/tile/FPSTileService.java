@@ -22,6 +22,7 @@ import android.os.Handler;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
+import com.xiaomi.parts.FPSInfoService;
 import com.xiaomi.parts.R;
 
 // TODO: Add FPS drawables
