@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/lavender
+DEVICE_PATH := device/xiaomi/whyred
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
@@ -48,8 +48,8 @@ BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
-TARGET_KERNEL_CONFIG := lavender-perf_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
+TARGET_KERNEL_CONFIG := whyred-perf_defconfig
 TARGET_KERNEL_NEW_GCC_COMPILE := true
 
 # ANT+
@@ -60,7 +60,7 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := lavender
+TARGET_OTA_ASSERT_DEVICE := whyred
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -210,4 +210,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/xiaomi/lavender/BoardConfigVendor.mk
+-include vendor/xiaomi/whyred/BoardConfigVendor.mk

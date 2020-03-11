@@ -4,14 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-$(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
+$(call inherit-product, vendor/xiaomi/whyred/whyred-vendor.mk)
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PLATFORM_SECURITY_PATCH_OVERRIDE := 2020-03-05
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
-    device/xiaomi/lavender
+    device/xiaomi/whyred
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint feature
 PRODUCT_PACKAGES += \
     fingerprintd \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_lavender
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_whyred
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -249,7 +249,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_lavender
+    android.hardware.light@2.0-service.xiaomi_whyred
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -332,7 +332,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-lavender.xml:system/etc/permissions/privapp-permissions-lavender.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-whyred.xml:system/etc/permissions/privapp-permissions-whyred.xml
 
 # Power
 PRODUCT_PACKAGES += \

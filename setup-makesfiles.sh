@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=lavender
+DEVICE=whyred
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2018

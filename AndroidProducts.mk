@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/du_lavender.mk
+    $(LOCAL_DIR)/du_whyred.mk
 
 COMMON_LUNCH_CHOICES := \
-    du_lavender-user \
-    du_lavender-userdebug \
-    du_lavender-eng
+    du_whyred-user \
+    du_whyred-userdebug \
+    du_whyred-eng
