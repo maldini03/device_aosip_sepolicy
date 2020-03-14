@@ -413,7 +413,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    camera.sdm660_shim
+    libcamera_sdm660_shim
 
 # Telephony
 PRODUCT_PACKAGES += \
